@@ -1,0 +1,9 @@
+name: 'Echo HelloWorld'
+description: 'Runs PowerShell echo script from actions_templates'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run PowerShell script
+      shell: pwsh
+      run: pwsh "${{ github.action_path }}/pwsh/echo_helloworld.ps1"
